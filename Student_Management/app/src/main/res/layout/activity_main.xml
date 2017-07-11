@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.leejinah.myapplication.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:text="총 학생 수"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/total_student_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/name_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="이름 :"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/add_button"
+        android:layout_alignStart="@+id/add_button" />
+
+    <TextView
+        android:id="@+id/id_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="학번 :"
+        android:layout_alignBaseline="@+id/id_field"
+        android:layout_alignBottom="@+id/id_field"
+        android:layout_alignLeft="@+id/name_text"
+        android:layout_alignStart="@+id/name_text" />
+
+    <EditText
+        android:id="@+id/name_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:layout_alignBaseline="@+id/name_text"
+        android:layout_alignBottom="@+id/name_text"
+        android:layout_toRightOf="@+id/id_text"
+        android:layout_alignRight="@+id/id_field"
+        android:layout_alignEnd="@+id/id_field" />
+
+    <EditText
+        android:id="@+id/id_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:layout_below="@+id/name_field"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/id_text"
+        android:layout_alignRight="@+id/delete_button"
+        android:layout_alignEnd="@+id/delete_button" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="등록"
+        android:onClick="addStudent"
+        android:layout_below="@+id/id_field"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="검색"
+        android:layout_alignBaseline="@+id/add_button"
+        android:layout_alignBottom="@+id/add_button"
+        android:onClick="searhStudent"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="삭제"
+        android:onClick="deleteStudent"
+        android:layout_marginRight="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_alignBaseline="@+id/search_button"
+        android:layout_alignBottom="@+id/search_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/all_print_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/delete_button"
+        android:layout_alignLeft="@+id/add_button"
+        android:layout_alignRight="@+id/delete_button"
+        android:layout_alignStart="@+id/add_button"
+        android:layout_below="@+id/add_button"
+        android:layout_marginTop="14dp"
+        android:onClick="printAllStudent"
+        android:text="전체출력" />
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/all_print_button"
+        android:layout_alignLeft="@+id/all_print_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/all_print_button"
+        android:layout_alignStart="@+id/all_print_button"
+        android:layout_below="@+id/all_print_button"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/colorAccent" />
+
+</RelativeLayout>
