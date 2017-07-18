@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.leejinah.student_join.MainActivity">
+
+
+    <TextView
+        android:id="@+id/student_name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/student_email"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="E-mail"
+        android:layout_below="@+id/student_name"
+        android:layout_alignLeft="@+id/student_name"
+        android:layout_alignStart="@+id/student_name" />
+
+    <TextView
+        android:id="@+id/student_pw"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="패스워드"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/student_email"
+        android:layout_alignLeft="@+id/student_email"
+        android:layout_alignStart="@+id/student_email" />
+
+    <TextView
+        android:id="@+id/student_phonenumber"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전화"
+        android:layout_below="@+id/student_pw"
+        android:layout_alignLeft="@+id/student_pw"
+        android:layout_alignStart="@+id/student_pw"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:id="@+id/student_hp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="홈페이지"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="35dp"
+        android:layout_below = "@+id/student_phonenumber"
+        android:layout_alignLeft="@+id/student_phonenumber"
+        android:layout_alignStart="@+id/student_phonenumber" />
+
+    <EditText
+        android:id="@+id/s_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginRight="36dp"
+        android:inputType="textPersonName"
+        android:layout_alignTop="@+id/student_name"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/s_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="36dp"
+        android:layout_alignLeft="@+id/s_name"
+        android:layout_alignStart="@+id/s_name"
+        android:layout_below="@+id/s_name"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/s_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_alignBaseline="@+id/student_pw"
+        android:layout_alignBottom="@+id/student_pw"
+        android:layout_alignLeft="@+id/s_email"
+        android:layout_alignStart="@+id/s_email"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/s_pn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:layout_alignBaseline="@+id/student_phonenumber"
+        android:layout_alignBottom="@+id/student_phonenumber"
+        android:layout_alignLeft="@+id/s_pw"
+        android:layout_alignStart="@+id/s_pw"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/s_hp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/student_hp"
+        android:layout_alignBottom="@+id/student_hp"
+        android:layout_alignLeft="@+id/s_pn"
+        android:layout_alignStart="@+id/s_pn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textSize="25sp"
+        android:layout_below="@+id/student_hp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
+
+    <TextView
+        android:id="@+id/view_join_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/s_hp"
+        android:layout_alignLeft="@+id/student_hp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/s_hp"
+        android:layout_alignStart="@+id/student_hp"
+        android:layout_below="@+id/button"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent" />
+
+
+</RelativeLayout>
