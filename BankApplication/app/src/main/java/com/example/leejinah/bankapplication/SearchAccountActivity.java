@@ -59,7 +59,7 @@ public class SearchAccountActivity extends AppCompatActivity implements View.OnC
                     if(mAccountHashMap.containsKey(id)){
                         Account account = mAccountHashMap.get(id);
                         if(account.getPw().equals(pw)){
-                            mResultTextView.setText(account.toString());
+                            mResultTextView.setText(account.getId() + "님의 계좌 정보"+"\n"+"금액 : " + account.getBalance());
                         }else{
                             Toast.makeText(this, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
                         }

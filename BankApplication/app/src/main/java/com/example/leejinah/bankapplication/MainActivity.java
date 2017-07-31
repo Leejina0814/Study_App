@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         finishBtn.setOnClickListener(this);
 
 
-    }
+}
 
     @Override
     public void onClick(View view) {
